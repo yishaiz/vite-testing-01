@@ -33,3 +33,17 @@ test('button has correct labeך and color after click', () => {
 
   // check the button color
 });
+
+test('checbox flow', () => {
+  render(<App />);
+
+  // find elements
+  const buttonElement = screen.getByRole('button', { name: /blue/i });
+  const checkboxElement = screen.getByRole('checkbox', {
+    name: /Disable button/i,
+  });
+
+  // check initial conditions
+  expect(buttonElement).toBeEnabled();
+  expect(checkboxElement).not.toBeChecked();
+});
