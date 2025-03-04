@@ -28,6 +28,7 @@ test('button has correct labeך and color after click', () => {
 
   // check button text
   expect(buttonElement).toHaveTextContent(/red/i);
+  // expect(buttonElement).toHaveStyle({ 'background-color': 'blue' });
   // expect(colorButton.textContent).toBe('Change to red');
 
   // check the button color
